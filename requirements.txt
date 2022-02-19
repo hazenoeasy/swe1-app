@@ -1,14 +1,2 @@
-asgiref @ file:///tmp/build/80754af9/asgiref_1625643473416/work
-autopep8 @ file:///opt/conda/conda-bld/autopep8_1639166893812/work
-certifi==2021.10.8
-dj-database-url==0.5.0
-Django @ file:///home/conda/feedstock_root/build_artifacts/django_1638897748254/work
-django-heroku==0.3.1
-gunicorn @ file:///Users/ktietz/ci_310/gunicorn_1643966106412/work
-psycopg2 @ file:///Users/ktietz/ci_310/psycopg2_1643967254545/work
-pycodestyle @ file:///tmp/build/80754af9/pycodestyle_1636635402688/work
-pytz==2021.3
-sqlparse @ file:///tmp/build/80754af9/sqlparse_1602184451250/work
-toml @ file:///tmp/build/80754af9/toml_1616166611790/work
-typing-extensions @ file:///tmp/build/80754af9/typing_extensions_1631814937681/work
-whitenoise==6.0.0
+Django==4.0
+django_heroku==0.3.1
