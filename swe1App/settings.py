@@ -115,10 +115,13 @@ USE_TZ = True
 
 STATIC_URL = "/static/"
 
+ALLOWED_HOSTS = []
 
-django_heroku.settings(locals())
-# elif "CI" in os.environ:
+if "HEROKU" in os.environ:
 
-    # django_heroku.settings(locals(), test_runner=False)
+    django_heroku.settings(locals())
+elif "CI" in os.environ:
+
+    django_heroku.settings(locals(), test_runner=False)
 
 # STATIC_ROOT = os.path.join(BASE_DIR, 'static')
