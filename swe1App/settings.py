@@ -116,12 +116,10 @@ USE_TZ = True
 STATIC_URL = "/static/"
 
 if "HEROKU" in os.environ:
-    import django_heroku
 
     django_heroku.settings(locals())
 elif "CI" in os.environ:
-    import django_heroku
 
     django_heroku.settings(locals(), test_runner=False)
 
-# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
