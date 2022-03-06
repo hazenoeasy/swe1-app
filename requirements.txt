@@ -18,3 +18,7 @@ toml==0.10.2
 urllib3==1.26.8
 whitenoise==6.0.0
 yarg==0.1.9
+black
+flake8
+coverage
+coveralls
