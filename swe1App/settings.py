@@ -117,13 +117,16 @@ STATIC_URL = "/static/"
 
 ALLOWED_HOSTS = []
 
-if os.environ.get("HOME") == "/app":
+if "HEROKU" in os.environ:
     django_heroku.settings(locals())
+elif "CI" in os.environ:
+
+    django_heroku.settings(locals(), test_runner=False)
 
 # STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 if DEBUG:
-   STATICFILES_DIRS = [
-   os.path.join(BASE_DIR, 'static'),
-   ]
+    STATICFILES_DIRS = [
+        os.path.join(BASE_DIR, "static"),
+    ]
 else:
-   STATIC_ROOT = os.path.join(BASE_DIR,'static')
+    STATIC_ROOT = os.path.join(BASE_DIR, "static")
