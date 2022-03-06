@@ -115,6 +115,8 @@ USE_TZ = True
 
 STATIC_URL = "/static/"
 
+ALLOWED_HOSTS = {'*'}
+
 if "HEROKU" in os.environ:
 
     django_heroku.settings(locals())
