@@ -114,6 +114,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = "/static/"
-django_heroku.settings(locals())
+
+if "HEROKU" in os.environ:
+    import django_heroku
+
+    django_heroku.settings(locals())
+elif "CI" in os.environ:
+    import django_heroku
+
+    django_heroku.settings(locals(), test_runner=False)
 
 # STATIC_ROOT = os.path.join(BASE_DIR, 'static')
